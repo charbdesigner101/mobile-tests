@@ -1,7 +1,7 @@
 ---
 _schema: default
 draft: false
-title: Booking
+title: Booking..
 page_description:
 featured_image:
   image_path:
@@ -38,6 +38,32 @@ hero:
     image_alignment: right
     color_group: secondary0
 content_blocks:
+  - _bookshop_name: sections/simple-text-block
+    content:
+      id:
+      heading:
+        _bookshop_name: generic/heading
+        eyebrow_headline: Eyebrow Heading
+        primary_heading: A simple text block for your FAQs
+        eyebrow_headline_hierarchy: h3
+        primary_heading_hierarchy: h2
+      text:
+        _bookshop_name: generic/text-block
+        text: >-
+          ### **How do I use the service?**
+
+
+          Customers want to know all the information before making a final
+          decision. Make sure you provide it to them.
+
+
+          ### **How do I pay for the service?**
+
+
+          Let your customers know if they can pay by EFTPOS or credit
+          card.<br><br>
+    styles:
+      color_group: secondary0
   - _bookshop_name: sections/form
     content:
       id: booking-form
@@ -97,30 +123,34 @@ content_blocks:
     styles:
       color_group: primary
       content_alignment: center
-  - _bookshop_name: sections/simple-text-block
+  - _bookshop_name: sections/centered-large-asset
     content:
       id:
       heading:
         _bookshop_name: generic/heading
         eyebrow_headline: Eyebrow Heading
-        primary_heading: A simple text block for your FAQs
+        primary_heading: Large image or video block
         eyebrow_headline_hierarchy: h3
         primary_heading_hierarchy: h2
-      text:
-        _bookshop_name: generic/text-block
-        text: >-
-          ### **How do I use the service?**
-
-
-          Customers want to know all the information before making a final
-          decision. Make sure you provide it to them.
-
-
-          ### **How do I pay for the service?**
-
-
-          Let your customers know if they can pay by EFTPOS or credit
-          card.<br><br>
+      description: >-
+        Have a strong visual element you want to share? This component gives you
+        the flexibility to either add a YouTube video or an image.
+      asset:
+        _bookshop_name: generic/video
+        video_source: YouTube
+        video_url: https://youtu.be/gVUloujNd_I?si=M9Pb81oigA6TKXyf
+        fallback_image:
+          _bookshop_name: generic/image
+          image_path:
+          image_alt:
+      button:
+        _bookshop_name: generic/button
+        url: '#booking-form'
+        open_in_new_tab: false
+        text: Book Now
+        variant: primary
+        arrow: right
+        onclick:
     styles:
       color_group: secondary0
   - _bookshop_name: sections/icon-cards
@@ -187,34 +217,29 @@ content_blocks:
       color_group: primary
       card_color_group: secondary0
       content_alignment: center
-  - _bookshop_name: sections/centered-large-asset
+  - _bookshop_name: sections/form
     content:
-      id:
+      id: Hello
       heading:
         _bookshop_name: generic/heading
         eyebrow_headline: Eyebrow Heading
-        primary_heading: Large image or video block
+        primary_heading: Primary Heading
         eyebrow_headline_hierarchy: h3
         primary_heading_hierarchy: h2
-      description: >-
-        Have a strong visual element you want to share? This component gives you
-        the flexibility to either add a YouTube video or an image.
-      asset:
-        _bookshop_name: generic/video
-        video_source: YouTube
-        video_url: https://youtu.be/gVUloujNd_I?si=M9Pb81oigA6TKXyf
-        fallback_image:
-          _bookshop_name: generic/image
-          image_path:
-          image_alt:
-      button:
-        _bookshop_name: generic/button
-        url: '#booking-form'
-        open_in_new_tab: false
-        text: Book Now
-        variant: primary
-        arrow: right
-        onclick:
+      description: Description text to compliment the block
+      form:
+        _bookshop_name: simple/form-builder
+        id:
+        form_submission_type: email/cloudcannon
+        inbox_key:
+        subject:
+        success_page: ''
+        form_elements: []
+        submit_button:
+          text: Button text
+          variant: primary
+          arrow: right
     styles:
-      color_group: secondary0
+      color_group: primary
+      content_alignment: center
 ---
